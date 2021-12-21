@@ -1,0 +1,17 @@
+
+.main-div mat-card{
+  padding: 0px;
+}
+.login-form{
+  padding: 20px;
+}
+.forget{
+  text-align: center;
+  margin-top: 20px;
+}
+p{
+  padding: 12px;
+    text-align: center;
+    margin-bottom: -9px;
+}
+
