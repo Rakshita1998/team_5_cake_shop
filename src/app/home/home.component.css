@@ -7,8 +7,8 @@ section{
 }
 .home1{
   text-align: center;
-
 }
+
 .home{
   background: linear-gradient(rgba(214,155,155,0.5),rgba(0,0,0,0.5)),url("../../assets/cakeimgs/homebg.png");
   background-repeat: no-repeat;
@@ -27,36 +27,82 @@ section{
   line-height: 2rem;
   color: cornsilk;
 }
-/* .home-btn{
-  padding:2rem 0;
-  padding: 2px 24px;
-} */
-button{
-  /* padding:2rem 0;
-  padding: 2px 24px; */
-
-      padding-top: 8px;
-      padding-bottom: 11px;
-
+p {
+  color: #5d6660;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
+.col-3 {
+  width: 32%;
   float: left;
-  width: 180px;
 }
+.menu li {
+  list-style-type: none;
+  display: inline;
+  font-size: .85em;
+  color: #8e8e8e;
+  padding-right: 20px;
 
-div.gallery:hover {
-  border: 1px solid #777;
 }
-
-div.gallery img {
-  width: 100%;
-  height: auto;
+#top-section-main {
+  /* background-image: url(../Images/friends.jpg); */
+  height: 740px;
+  border: none;
 }
-
-div.desc {
-  padding: 15px;
+#top-section-content {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+#top-section-content h1 {
+  font-size: 4em;
+  font-weight: 300;
+  color: #ffffff;
   text-align: center;
+  margin-top: 0;
+  padding-top: 100px;
+  margin-bottom: 15px;
+}
+#top-section-content p {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0px;
+
+}
+#feature-section {
+  padding-top: 100px;
+  margin-left:1px ;
+}
+.feature-section-title {
+  width: 70%;
+  text-align: center;
+  font-weight: 200;
+  line-height: 1.5em;
+  margin: auto;
+}
+.feature-content {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding-top: 100px;
+  margin-left: 182px;
+}
+.feature-content .col-3 img {
+  width: 100%;
+}
+.feature-content .col-3 p {
+  font-size: .9em;
+  letter-spacing: 1px;
+}
+.feature-content .col-3 {
+  padding: 10px;
+  width: 30%;
+}
+.col-2 {
+  float: left;
+  width: 48%;
 }

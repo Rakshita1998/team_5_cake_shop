@@ -1,0 +1,37 @@
+.footer{
+
+  bottom:0;
+  left: 0;
+  width: 100%;
+  position:sticky;
+  top: 100%;
+  overflow: hidden;
+  background-color: rgb(245, 170, 170);
+  padding: 40px 20px;
+
+
+}
+h1{
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+p{
+  color: white;
+  font-size: 15px;
+}
+a{
+  color: white;
+  text-decoration: none;
+  padding: 40px 6px;
+  font-size: 15px;
+
+}
+a:hover{
+  color:gold;
+
+}
+i{
+  padding-top: 0px 40px;
+color: var(--primaey-color);
+}

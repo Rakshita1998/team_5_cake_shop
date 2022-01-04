@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -8,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  constructor(private router:Router,private route:ActivatedRoute) { }
+  onLoadAllcake()
+  {
+     this.router.navigate(['/allcake']);
+  }
 
+  onLoadpineapple(){
+    this.router.navigate(['/pineapple']);
+  }
   ngOnInit(): void {
 
   }

@@ -1,1 +1,69 @@
-<p>register works!</p>
+<div class="bg">
+  <div class="container ">
+
+       <div class="d-flex flex-lg-row flex-column-reverse">
+           <div class="card card1">
+               <div class="row justify-content-center my-auto">
+                   <div class="col-md-8 col-10 my-5">
+                       <div class="row justify-content-center px-3 mb-3">
+                         <img id="logo" src="../../assets/cakeimgs/logoN.jpg"> </div>
+
+
+                       <h3 class="mb-5 text-center heading">Cake&Cookies</h3>
+
+                       <h6 class="msg-info">Register Here</h6>
+
+                       <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+                          <label  class="form-control-label text-muted">Firstname</label>
+                          <input type="text" placeholder="Enter Firstname" formControlName="firstname">
+                          <span style="color: red;" *ngIf="firstname && firstname.invalid && firstname.touched"> invalid Firstname</span><br>
+                          <br>
+
+                          <label  class="form-control-label text-muted">Lastname</label>
+                          <input type="text" placeholder="Enter Lastname" formControlName="lastname">
+                          <span style="color: red;" *ngIf="lastname && lastname.invalid && lastname.touched"> invalid Lastname</span><br>
+                          <br>
+
+                          <label  class="form-control-label text-muted">Email</label>
+                          <input type="email" placeholder="Enter email" formControlName="email">
+                          <span style="color: red;" *ngIf="email && email.invalid && email.touched"> invalid email</span><br>
+                          <br>
+
+                          <label  class="form-control-label text-muted">Contact</label>
+                          <input type="number" placeholder="Enter Phone no" formControlName="contact">
+                          <span style="color: red;" *ngIf="contact && contact.invalid && contact.touched"> invalid contact</span><br>
+                          <br>
+
+
+                         <label  class="form-control-label text-muted">Password</label>
+                         <input type="password" placeholder="Password" formControlName="password">
+                         <span style="color: red;" *ngIf="password && password.invalid && password.touched">invalid password</span><br>
+
+                         <label  class="form-control-label text-muted">Confirm Password</label>
+                         <input type="password" placeholder="confirmpassword" formControlName="password">
+                         <span style="color: red;" *ngIf="password && password.invalid && password.touched">Does not match Password</span><br>
+
+                         <label  class="form-control-label text-muted">Date of Birth</label>
+                         <input type="date"  placeholder="dd-mm-yyyy"  formControlName="dob" min="1997-01-01" max="2030-12-31">
+                          <br>
+
+                          <div class="row justify-content-center my-3 px-3">
+                          <button class="btn-block btn-color">Submit </button>
+                          </div>
+                       </form>
+
+                   </div>
+               </div>
+
+           </div>
+           <div class="card card2">
+               <div class="my-auto mx-md-5 px-md-5 right">
+                   <h3 class="text-white">We are more than just a company</h3>
+                   <small class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small>
+               </div>
+           </div>
+       </div>
+
+ <!-- </div> -->
+ <!-- </div> -->

@@ -1,44 +1,4 @@
-<!-- navbar starts here -->
-
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:  #f4edea">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="assets/icon1.png" width="45" height="40" class="d-inline-block align-top" alt="">
-      Cake&Cookies
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-danger color " type="submit">Search</button>
-      </form>
-
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link " routerLink="home" routerLinkActive="active-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="menu" routerLinkActive="active-link">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="cart" routerLinkActive="active-link">Cart</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="login" routerLinkActive="active-link">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="register" routerLinkActive="active-link">Register</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- nav bar ends here -->
+<app-header></app-header>
 
 <router-outlet></router-outlet>
-
+<app-footer></app-footer>
