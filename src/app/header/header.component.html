@@ -1,36 +1,4 @@
-<!-- navbar starts here -->
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand ColorClass" >
-      <img style="margin-top: -13px;" src="../../assets/cakeimgs/logoN.jpg" width="45" height="40"
-        class="d-inline-block align-top" alt="">Cake&Cookies</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse">
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button mat-raised-button style="padding-right:21px" color="warn" >Search</button>
-      </form>
 
-<!-- Angular mat buttons -->
-
-      <div class="example-button-row" style="margin-left: 287px;">
-        <button mat-raised-button style="right: 29px; padding: 0px 24px;" color="warn" routerLink="login"
-          routerLinkActive="active-link">Sign-In</button>
-
-        <button mat-raised-button style="right: 15px;" color="warn" routerLink="register"
-          routerLinkActive="active-link">Sign-Up</button>
-
-        <button mat-raised-button style="padding: 0px 23px" color="warn" routerLink="login"
-        routerLinkActive="active-link">Logout</button>
-      </div>
-<!-- Angular mat buttons end-->
-    </div>
-  </div>
-</nav>
-<!-- nav bar ends here -->
 <!-- header section starts here -->
 <nav class="navbar navbar-expand-lg " style="background-color: rgb(245, 170, 170);">
   <div class="container-fluid">
@@ -43,27 +11,19 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="home" routerLinkActive="active-link">Home</a>
+          <a class="nav-link active" aria-current="page"  (click)="onLoadHome()">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="menu" routerLinkActive="active-link" >Menu</a>
+          <a class="nav-link"  (click)="onLoadMenu()" >Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="cart" routerLinkActive="active-link">Cart</a>
+          <a class="nav-link" (click)="onLoadCart()">Cart</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" (click)="onLoadFeedback()">Feedback</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="order" routerLinkActive="active-link">Order</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            More
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" routerLink="dropdown" routerLinkActive="active-link">
-            <li><a class="dropdown-item" href="#">Feedback</a></li>
-            <li><a class="dropdown-item" href="#">Contact us</a></li>
-
-          </ul>
+         <li class="nav-item">
+          <a class="nav-link" (click)="onLoadContact()">Contact us</a>
         </li>
       </ul>
     </div>

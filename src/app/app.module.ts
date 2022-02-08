@@ -10,9 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
-import { AllcakesComponent } from './menuitems/allcakes/allcakes.component';
-import { PineappleComponent } from './menuitems/pineapple/pineapple.component';
-import { ChocolateComponent } from './menuitems/chocolate/chocolate.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -27,7 +25,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
 import { OrderComponent } from './order/order.component';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ContactComponent } from './contact/contact.component';
 
+import { ProductService } from './services/product.service';
+
+import { CartStatusComponent } from './cart-status/cart-status.component';
 // angular material ends
 
 
@@ -37,17 +41,16 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-
     MenuComponent,
     FooterComponent,
-    AllcakesComponent,
-    PineappleComponent,
-    ChocolateComponent,
+
     HeaderComponent,
     OrderComponent,
+    NavbarComponent,
+    FeedbackComponent,
+    ContactComponent,
 
-
-
+    CartStatusComponent
   ],
   imports: [
     BrowserModule,
@@ -63,10 +66,10 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
     MatCheckboxModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

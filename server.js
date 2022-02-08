@@ -1,5 +1,4 @@
-// in nodejs - express is referred as module or package
-// reuqire() is a nodejs function to load the module at run time
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./db");
@@ -7,10 +6,6 @@ const { application_name } = require("pg/lib/defaults");
 
 // call the function
 const app = express();
-
-// for every incoming request, bodyParser will parse data from bytes into JSON object &
-// vice-versa for every reponse JSON into bytes
-// Will work with POST and PUT/PATCH
 app.use(bodyParser.json());
 
 // middleaware - to enable cors at server-side
@@ -32,9 +27,9 @@ app.get("/", (req, res) => {
 });
 
 // define more URL
-app.get("/cakeshop/Login", db.getUsers);
-app.get("/cakeshop/Login:id", db.getUsersById);
-app.post("cakeshop/Login", db.postUsers);
+app.get("/cakeshop/login", db.getUsers);
+app.get("/cakeshop/login:id", db.getUsersById);
+app.post("cakeshop/login", db.postUsers);
 
 const port = 3000;
 app.listen(port, () => {

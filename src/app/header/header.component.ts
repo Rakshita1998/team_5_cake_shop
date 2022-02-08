@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private route:ActivatedRoute) { }
+
+  onLoadHome()
+  {
+    this.router.navigate(['/home']);
+  }
+  onLoadMenu()
+  {
+    this.router.navigate(['/menu']);
+  }
+
+  onLoadCart()
+  {
+    this.router.navigate(['/cart']);
+  }
+
+  onLoadContact()
+  {
+    this.router.navigate(['/contact']);
+  }
+
+  onLoadFeedback()
+  {
+    this.router.navigate(['/feedback']);
+  }
+
+
+
 
   ngOnInit(): void {
   }

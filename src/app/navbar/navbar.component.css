@@ -1,0 +1,50 @@
+.nav{
+  margin-left: 152px;
+
+}
+.nav-item{
+  color: aliceblue;
+}
+.button{
+    padding-right: 15px;
+}
+.active-link{
+font-weight: bold;
+}
+.d-flex
+{
+margin-left: 182px;
+}
+
+.example-button-row  {
+  margin: 8px 8px 8px 0;
+}
+
+.ColorClass{
+  color: rgb(247, 114, 114);
+}
+li{
+  border-right: 1px solid #e9b97a;
+}
+ul{
+  line-height: 36px;
+  height: 36px;
+}
+
+a:nth-child(1){
+  width: 100px;
+}
+a:nth-child(2){
+  width: 160px;
+}
+a:nth-child(3){
+  width: 100px;
+}
+a:nth-child(4){
+  width: 160px;
+}
+
+a{
+  color: aliceblue;
+
+}

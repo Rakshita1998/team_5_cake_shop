@@ -9,21 +9,40 @@
                         <img id="logo" src="../../assets/cakeimgs/logoN.jpg"> </div>
 
 
+                        <div>
+                          <ul>
+                            <li *ngFor="let user of login">{{ user.email }} -{{ user.password }}</li>
+
+                          </ul>
+
+
+
+                          <div>
+
+                            <button (click)="getUsers()">Get All Users</button>
+
+                          </div>
+
+                         </div>
+
+
+
+
                       <h3 class="mb-5 text-center heading">Cake&Cookies</h3>
 
                       <h6 class="msg-info">Please login to your account</h6>
 
                       <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
 
-                         <label  class="form-control-label text-muted">Username</label>
-                         <input type="text" placeholder="Phone no or email id" formControlName="user">
-                         <span style="color: red;" *ngIf="user && user.invalid && user.touched"> invalid username</span>
+                         <label  class="form-control-label text-muted">Email</label>
+                         <input type="text" placeholder="Enter email id" formControlName="email">
+                         <span style="color: red;" *ngIf="email && email.invalid && email.touched"> Invalid Email</span>
                          <br>
 
 
                         <label  class="form-control-label text-muted">Password</label>
                         <input type="password" placeholder="Password" formControlName="password">
-                        <span style="color: red;" *ngIf="password && password.invalid && password.touched">invalid password</span>
+                        <span style="color: red;" *ngIf="password && password.invalid && password.touched">Invalid password</span>
 
 
                          <div class="row justify-content-center my-3 px-3">

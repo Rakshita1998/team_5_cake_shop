@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
     confirmpassword:new FormControl('',[Validators.required,Validators.minLength(5)]),
     dob:new FormControl('',[Validators.required])
   })
+
   loginUser(){
     console.warn(this.loginForm.value)
   }

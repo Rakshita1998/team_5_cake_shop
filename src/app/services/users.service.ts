@@ -17,12 +17,12 @@ export class UsersService {
 
    getAllUsers(){
      console.log("within service")
-     return this.http.get(`${this.baseUrl}/cakeshop/Login`);
+     return this.http.get(`${this.baseUrl}/cakeshop/login`);
    }
 
 addNewUsers(newUser: User)
 {
-   return this.http.post(`${this.baseUrl}/cakeshop/Login`, newUser);
+   return this.http.post(`${this.baseUrl}/cakeshop/login`, newUser);
 }
 
 }

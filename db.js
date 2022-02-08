@@ -1,7 +1,5 @@
 const Pool = require("pg").Pool;
 
-
-
 // database connection
 const db = new Pool({
 user: "postgres",
@@ -11,11 +9,9 @@ password: "root",
 port: 5432,
 });
 
-
-
 function getUsers(req, res) {
   console.log("connecting to database");
-  db.query("SELECT * FROM Login", (error, result) => {
+  db.query("SELECT * FROM login", (error, result) => {
     if (error) {
       throw error;
     }
@@ -32,7 +28,7 @@ const id = req.params.id;
 
 
 
-db.query("SELECT * FROM Login where id=$1", [id], (error, result) => {
+db.query("SELECT * FROM login where id=$1", [id], (error, result) => {
 if (error) {
 throw error;
 }
@@ -49,7 +45,7 @@ const newPost = req.body;
 const email = newPost.email;
 const password = newPost.password;
 db.query(
-"INSERT INTO Login(email, password) values($1, $2)",
+"INSERT INTO login(email, password) values($1, $2)",
 [email, password],
 (error, result) => {
 if (error) {
