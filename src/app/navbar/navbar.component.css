@@ -6,7 +6,9 @@
   color: aliceblue;
 }
 .button{
-    padding-right: 15px;
+  margin-left: 149px;
+
+
 }
 .active-link{
 font-weight: bold;
@@ -31,7 +33,7 @@ ul{
   height: 36px;
 }
 
-a:nth-child(1){
+/* a:nth-child(1){
   width: 100px;
 }
 a:nth-child(2){
@@ -42,7 +44,7 @@ a:nth-child(3){
 }
 a:nth-child(4){
   width: 160px;
-}
+} */
 
 a{
   color: aliceblue;
