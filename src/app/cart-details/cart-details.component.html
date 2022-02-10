@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+      <div class="container-fluid">
+
+        <table class="table table-bordered">
+          <tr>
+            <th width="20%">Cake Image</th>
+            <th width="50%">Cake Price</th>
+            <th width="30%"></th>
+          </tr>
+
+          <tr *ngFor="let tempCart of cartItems" >
+            <td>
+              <img src="{{ tempCart.imageUrl}}" class="img-responsive" width="150px" />
+            </td>
+            <td>
+                <p>{{tempCart.name}}</p>
+              <p>{{tempCart.prodprice | currency: 'INR'}}</p>
+            </td>
+            <td>
+              <div class="items">
+                <label >Quantity:</label>{{tempCart.quantity}}
+              </div>
+              <p class="mt-2">Subtotal: {{ tempCart.quantity * tempCart.prodprice | currency: 'USD' }}</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td style="font-weight: bold">
+                <p>Total Quantity: {{ totalQuantity }}</p>
+
+                <p>Total Price: {{ totalPrice | currency: 'INR' }}</p>
+            </td>
+
+          </tr>
+        </table>
+      </div>
+    </div>
+
+</div>

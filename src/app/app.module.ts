@@ -23,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductService } from './services/product.service';
 import { CartStatusComponent } from './cart-status/cart-status.component';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { CartDetailsComponent } from './cart-details/cart-details.component';
 // angular material ends
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ProductlistComponent } from './productlist/productlist.component';
     FooterComponent,
     NavbarComponent,
     CartStatusComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    CartDetailsComponent
   ],
   imports: [
     BrowserModule,
