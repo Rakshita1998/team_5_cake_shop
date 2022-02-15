@@ -8,10 +8,10 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./cart-details.component.css']
 })
 export class CartDetailsComponent implements OnInit {
-//properties
+  //properties
   cartItems: Cart[] = [];//for cart items empty array
-  totalPrice: number=0;
-  totalQuantity: number =0;
+  totalPrice: number = 0;
+  totalQuantity: number = 0;
 
 
   constructor(private cartService: CartService) { }
@@ -20,17 +20,30 @@ export class CartDetailsComponent implements OnInit {
     this.listCartDetails();
   }
   listCartDetails() {
-   this.cartItems = this.cartService.cartItems;
+    // get a handle to the cart items
+    this.cartItems = this.cartService.cartItems;
 
-   this.cartService.totalPrice.subscribe(
-     data => this.totalPrice = data
-     );
-
-     this.cartService.totalQuantity.subscribe(
+    //cart totalPrice
+    this.cartService.totalPrice.subscribe(
+      data => this.totalPrice = data
+    );
+    //cart totalQuantity
+    this.cartService.totalQuantity.subscribe(
       data => this.totalQuantity = data
-      );
+    );
 
-   this.cartService.computeCartTotals();
+    this.cartService.computeCartTotals();
+  }
+
+
+  ///for increment quantity-----------------------------
+  incrementQuantity(theCart: Cart) {
+    this.cartService.addToCart(theCart);
+  }
+
+  //for decrement quantity--------------------------
+  decrementQuantity(theCart: Cart) {
+    this.cartService.decrementQuantity(theCart);
   }
 
 }

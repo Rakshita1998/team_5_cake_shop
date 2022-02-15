@@ -11,7 +11,7 @@ export class CartStatusComponent implements OnInit {
 
   totalPrice: number = 0.00;
   totalQuantity: number = 0;
-  constructor(private cartService: CartService, private router:Router,private route:ActivatedRoute) { }
+  constructor(private cartService: CartService, private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.updateCartStatus();

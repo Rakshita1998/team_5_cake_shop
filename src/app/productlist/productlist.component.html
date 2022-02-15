@@ -1,89 +1,25 @@
-<!-- -------------------------category section---------------------------------- -->
-
-<!-- <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-2">
-      <div class="card shadow" style="width: 10rem">
-        <div class="inner">
-          <img
-            src="../../assets/cakeimgs/pineAF.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-        </div>
-        <div class="card-body text-center">
-          <a class="btn btn-primary">Pineapple</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="card shadow" style="width: 10rem">
-        <div class="inner">
-          <img
-            src="../../assets/cakeimgs/chocoF.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-        </div>
-        <div class="card-body text-center">
-          <a class="btn btn-primary">Chocolate</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="card shadow" style="width: 10rem">
-        <div class="inner">
-          <img
-            src="../../assets/cakeimgs/Red-VelvetF.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-        </div>
-        <div class="card-body text-center">
-          <a class="btn btn-primary">RedVelvet </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="card shadow" style="width: 10rem">
-        <div class="inner">
-          <img
-            src="../../assets/cakeimgs/BlackFF.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-        </div>
-        <div class="card-body text-center">
-          <a class="btn btn-primary">BlackForest</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- -------------------------------------------------------------------------------------------------- -->
-
 <div class="row" style="display: contents">
   <div *ngFor="let tempProduct of products">
     <div class="column">
       <div class="image">
-        <img
-          src="{{ tempProduct.imageurl }}"
-          style="padding: 12px"
-          class="img-responsive"
-        />
+        <img src="{{ tempProduct.imageurl }}" style="padding: 12px" class="img-responsive" />
       </div>
+
       <div class="title">
         <h1>{{ tempProduct.name }}</h1>
       </div>
+
       <div class="des">
         <p>{{ tempProduct.description }}</p>
         <p>{{ tempProduct.prodweigth }}</p>
         <p>{{ tempProduct.prodprice | currency: "INR" }}</p>
+
         <button (click)="addToCart(tempProduct)">ADD TO CART</button>
+
       </div>
+
     </div>
+
   </div>
+
 </div>

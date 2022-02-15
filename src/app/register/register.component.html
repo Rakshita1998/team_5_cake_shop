@@ -1,70 +1,66 @@
 <div class="container">
   <h2 class="textual">User registration</h2>
   <form #Registerform="ngForm" (ngSubmit)="registerUser()">
-      <small  >{{msg}}</small>
+    <small>{{msg}}</small>
 
-      <div class="form-group">
-          <label for="fname">First Name:</label>
-          <input type="text" class="form-control"  placeholder="Enter your first name" name="fname" [(ngModel)]="user.fname" #fname="ngModel" required
-          [class.is-invalid]="fname.invalid && fname.touched"
-          >
-          <small class="text-danger" [class.d-none]="fname.valid || fname.untouched">First name is required field</small>
-        </div>
+    <div class="form-group">
+      <label for="fname">First Name:</label>
+      <input type="text" class="form-control" placeholder="Enter your first name" name="fname" [(ngModel)]="user.fname"
+        #fname="ngModel" required [class.is-invalid]="fname.invalid && fname.touched">
+      <small class="text-danger" [class.d-none]="fname.valid || fname.untouched">First name is required field</small>
+    </div>
 
-        <div class="form-group">
-          <label for="lname">Last Name:</label>
-          <input type="text" class="form-control"  placeholder="Enter your last name" name="lname" [(ngModel)]="user.lname" #lname="ngModel" required
-          [class.is-invalid]="lname.invalid && lname.touched"
-          >
-          <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">Last name is required field</small>
-        </div>
+    <div class="form-group">
+      <label for="lname">Last Name:</label>
+      <input type="text" class="form-control" placeholder="Enter your last name" name="lname" [(ngModel)]="user.lname"
+        #lname="ngModel" required [class.is-invalid]="lname.invalid && lname.touched">
+      <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">Last name is required field</small>
+    </div>
 
 
-         <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" class="form-control"  placeholder="Enter email" name="email" [(ngModel)]="user.emailId" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-              #email="ngModel"
-              [class.is-invalid]="email.invalid && email.touched"
-              >
-              <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required field</small>
-              <div *ngIf="email.errors && (email.invalid && email.touched)">
-                <!-- <small class="text-danger" *ngIf="email.errors.required">Email Id is required field</small>
-                <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid email Id</small> -->
-              </div>
-            </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.emailId"
+        required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched">
+      <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required field</small>
+      <div *ngIf="email.errors && (email.invalid && email.touched)">
 
-            <div class="form-group">
-              <label for="contact">Contact:</label>
-              <input type="number" class="form-control"  placeholder="Enter phone number" name="contact" [(ngModel)]="user.contact" #contact="ngModel" required
-              [class.is-invalid]="contact.invalid && contact.touched"
-              >
-              <small class="text-danger" [class.d-none]="contact.valid || contact.untouched">Contact is required field</small>
-            </div>
+      </div>
+    </div>
 
-            <div class="form-group">
-              <label for="birthdate">Birthdate:</label>
-              <input type="date" class="form-control"  placeholder="Enter your DOB" name="birthDate" [(ngModel)]="user.birthDate" #birthDate="ngModel" required
-              [class.is-invalid]="birthDate.invalid && birthDate.touched"
-              >
-              <small class="text-danger" [class.d-none]="birthDate.valid || birthDate.untouched">DOB is required field</small>
-            </div>
-            <div class="form-group">
-              <label for="pwd">Password:</label>
-              <input type="password" class="form-control"  placeholder="Enter password" name="password" [(ngModel)]="user.password" #password="ngModel" required
-              [class.is-invalid]="password.invalid && password.touched"
-              >
-              <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required field</small>
-            </div>
+    <div class="form-group">
+      <label for="contact">Contact:</label>
+      <input type="number" class="form-control" placeholder="Enter phone number" name="contact"
+        [(ngModel)]="user.contact" #contact="ngModel" required [class.is-invalid]="contact.invalid && contact.touched">
+      <small class="text-danger" [class.d-none]="contact.valid || contact.untouched">Contact is required field</small>
+    </div>
 
-            <div class="form-group">
-              <label for="pwd">Confirm Password:</label>
-              <input type="password" class="form-control"  placeholder="Enter confirm password" name="cpassword" [(ngModel)]="user.password" #cpassword="ngModel" required
-              [class.is-invalid]="cpassword.invalid && cpassword.touched"
-              >
-              <small class="text-danger" [class.d-none]="cpassword.valid || cpassword.untouched">password & confirm password must be same</small>
-            </div>
+    <div class="form-group">
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" class="form-control" placeholder="Enter your DOB" name="birthDate" [(ngModel)]="user.birthDate"
+        #birthDate="ngModel" required [class.is-invalid]="birthDate.invalid && birthDate.touched">
+      <small class="text-danger" [class.d-none]="birthDate.valid || birthDate.untouched">DOB is required field</small>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" placeholder="Enter password" name="password"
+        [(ngModel)]="user.password" #password="ngModel" required
+        [class.is-invalid]="password.invalid && password.touched">
+      <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required
+        field</small>
+    </div>
 
-            <button  type="submit" class="btn btn-info">Register</button>
-            <small class="float-right btextual" [routerLink]="['/login']">Existing user? Login here</small>"
-            </form>
-          </div>
+    <div class="form-group">
+      <label for="pwd">Confirm Password:</label>
+      <input type="password" class="form-control" placeholder="Enter confirm password" name="cpassword"
+        [(ngModel)]="user.password" #cpassword="ngModel" required
+        [class.is-invalid]="cpassword.invalid && cpassword.touched">
+      <small class="text-danger" [class.d-none]="cpassword.valid || cpassword.untouched">password & confirm password
+        must be same</small>
+    </div><br>
+
+    <button  type="submit" class="btn btn-info">Register</button>
+    <small class="float-right btextual" [routerLink]="['/login']">Existing user? Login here</small>"<br>
+  </form>
+</div>

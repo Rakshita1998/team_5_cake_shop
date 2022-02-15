@@ -32,4 +32,8 @@ this._service.loginUserFromRemote(this.user).subscribe(
 gotoregister(){
   this._router.navigate(['/register'])
 }
+
+gotoproductlist(){
+  this._router.navigate(['/productlist'])
+}
 }

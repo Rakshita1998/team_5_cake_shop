@@ -9,8 +9,6 @@ import { map } from 'rxjs/operators';
 export class ProductService {
 
   private baseUrl = 'http://localhost:8080/products';
-
-
   constructor(private httpClient : HttpClient) { }
   getProductList(): Observable<Product[]>{
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(

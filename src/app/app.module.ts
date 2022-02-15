@@ -24,6 +24,8 @@ import { ProductService } from './services/product.service';
 import { CartStatusComponent } from './cart-status/cart-status.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
+
+import { CheckoutComponent } from './checkout/checkout.component';
 // angular material ends
 
 @NgModule({
@@ -36,7 +38,9 @@ import { CartDetailsComponent } from './cart-details/cart-details.component';
     NavbarComponent,
     CartStatusComponent,
     ProductlistComponent,
-    CartDetailsComponent
+    CartDetailsComponent,
+
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
