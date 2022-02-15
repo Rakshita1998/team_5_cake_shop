@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { UsersService } from '../services/users.service';
-
-
-
+import { NgForm } from '@angular/forms';
+import { Route, Router } from '@angular/router';
+import { User } from '../common/user';
+import { RegisterService } from '../services/register.service';
 
 
 @Component({
@@ -12,36 +10,30 @@ import { UsersService } from '../services/users.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit
-{
-  loginForm= new FormGroup({
-    user:new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z]+$')]),
-    password:new FormControl('',[Validators.required,Validators.minLength(5)])
-  })
-  loginUser(){
-    console.warn(this.loginForm.value)
-  }
-  get user(){
-    return this.loginForm.get('user');
-  }
-  get password(){
-    return this.loginForm.get('password');
-  }
-  service: UsersService;
+export class LoginComponent implements OnInit {
+user = new User()
+msg=''
+  constructor(private _service : RegisterService,private _router : Router) { }
 
-
-  constructor(private router:Router,private route:ActivatedRoute,services:UsersService) {
-
-  this.service=this.service;
-
-  }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
+loginUser(){
+this._service.loginUserFromRemote(this.user).subscribe(
+  data => {
+    console.log("response recieved");
+    this._router.navigate(['/loginsuccess'])
+  },
+  error => {
+    console.log("exception occured");
+    this.msg="Bad credentials, Please enter valid emailid and password";
+  }
+  )
+}
+gotoregister(){
+  this._router.navigate(['/register'])
+}
 
-
- }
-
-
-
-
+gotoproductlist(){
+  this._router.navigate(['/productlist'])
+}
+}

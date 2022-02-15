@@ -1,29 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartDetailsComponent } from './cart-details/cart-details.component';
+
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { MenuComponent } from './menu/menu.component';
-import { AllcakesComponent } from './menuitems/allcakes/allcakes.component';
-import { PineappleComponent } from './menuitems/pineapple/pineapple.component';
-import { OrderComponent } from './order/order.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+
 import { RegisterComponent } from './register/register.component';
 
-
 const routes: Routes = [
-  {component:MenuComponent,path:'menu'},
+
   {component:LoginComponent,path:'login'},
   {component:RegisterComponent,path:'register'},
   {component:HomeComponent,path:'home'},
   {component:CartComponent,path:'cart'},
-  {component:PineappleComponent,path:'pineapple'},
-  {component:OrderComponent,path:'order'},
-  {component:AllcakesComponent,path:'allcake'}
+  {component:ProductlistComponent,path:'productlist'},
+  {component:CartDetailsComponent,path:'cartDetails'},
+  {component:CheckoutComponent,path:'checkout'}
+
 
 
 ];
-
 @NgModule({
+
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

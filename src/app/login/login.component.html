@@ -1,53 +1,30 @@
-<div class="bg">
- <div class="container ">
+<div class="container">
+  <h2>User Login</h2>
+  <form #loginform="ngForm" (ngSubmit)="loginUser()">
+    {{ loginform.form.valid }}
+    <small class="text-danger">{{ msg }}</small>
+    <div class="form-group">
 
-      <div class="d-flex flex-lg-row flex-column-reverse">
-          <div class="card card1">
-              <div class="row justify-content-center my-auto">
-                  <div class="col-md-8 col-10 my-5">
-                      <div class="row justify-content-center px-3 mb-3">
-                        <img id="logo" src="../../assets/cakeimgs/logoN.jpg"> </div>
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.emailId"
+        required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched" />
+      <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required field</small>
+    </div>
 
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" placeholder="Enter password" name="password"
+        [(ngModel)]="user.password" #password="ngModel" required
+        [class.is-invalid]="password.invalid && password.touched" />
+      <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required
+        field</small>
+    </div><br>
 
-                      <h3 class="mb-5 text-center heading">Cake&Cookies</h3>
+    <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info" (click)="gotoproductlist()">
+      login
+    </button>
 
-                      <h6 class="msg-info">Please login to your account</h6>
-
-                      <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
-
-                         <label  class="form-control-label text-muted">Username</label>
-                         <input type="text" placeholder="Phone no or email id" formControlName="user">
-                         <span style="color: red;" *ngIf="user && user.invalid && user.touched"> invalid username</span>
-                         <br>
-
-
-                        <label  class="form-control-label text-muted">Password</label>
-                        <input type="password" placeholder="Password" formControlName="password">
-                        <span style="color: red;" *ngIf="password && password.invalid && password.touched">invalid password</span>
-
-
-                         <div class="row justify-content-center my-3 px-3">
-                         <button class="btn-block btn-color">Login </button>
-
-                        <div class="row justify-content-center my-2">
-                        <a href="#"><small class="text-muted">Forgot Password?</small></a> </div>
-                      </div>
-                      </form>
-
-                  </div>
-              </div>
-              <div class="bottom text-center mb-5">
-                  <p href="#" class="sm-text mx-auto mb-3">Don't have an account?
-                    <button class="btn btn-white ml-2">Create new</button></p>
-              </div>
-          </div>
-          <div class="card card2">
-              <div class="my-auto mx-md-5 px-md-5 right">
-                  <h3 class="text-white">We are more than just a company</h3>
-                  <small class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small>
-              </div>
-          </div>
-      </div>
-
-<!-- </div> -->
-<!-- </div> -->
+  </form>
+  <small class="float-right" (click)="gotoregister()">New user? Register here!</small>
+</div>

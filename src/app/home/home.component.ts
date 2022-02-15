@@ -11,8 +11,10 @@ export class HomeComponent implements OnInit {
   public collection:any;
 
   constructor(private commonService:CommonService,private router:Router,private route:ActivatedRoute) { }
+
+  //ordernow btn event handler
   onLoadOrder(){
-    this.router.navigate(['/menu'])
+    this.router.navigate(['/register'])
   }
 
   ngOnInit(): void {

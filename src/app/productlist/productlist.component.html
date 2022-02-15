@@ -1,0 +1,25 @@
+<div class="row" style="display: contents">
+  <div *ngFor="let tempProduct of products">
+    <div class="column">
+      <div class="image">
+        <img src="{{ tempProduct.imageurl }}" style="padding: 12px" class="img-responsive" />
+      </div>
+
+      <div class="title">
+        <h1>{{ tempProduct.name }}</h1>
+      </div>
+
+      <div class="des">
+        <p>{{ tempProduct.description }}</p>
+        <p>{{ tempProduct.prodweigth }}</p>
+        <p>{{ tempProduct.prodprice | currency: "INR" }}</p>
+
+        <button (click)="addToCart(tempProduct)">ADD TO CART</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

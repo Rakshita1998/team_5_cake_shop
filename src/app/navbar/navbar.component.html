@@ -1,0 +1,47 @@
+
+<!-- navbar starts here -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand ColorClass" >
+      <img style="margin-top: -13px;" src="../../assets/cakeimgs/logoN.jpg" width="45" height="40"
+        class="d-inline-block align-top" alt="">Cake&Cookies</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button mat-raised-button style="padding-right:21px" color="warn" >Search</button>
+      </form>
+
+<!-- Angular mat buttons -->
+
+      <div class="example-button-row" >
+
+        <button mat-raised-button  color="warn" routerLink="home"
+        routerLinkActive="active-link">Home</button>
+
+        <button mat-raised-button  color="warn" routerLink="productlist"
+        routerLinkActive="active-link">Menu</button>
+
+        <button mat-raised-button color="warn" routerLink="login"
+          routerLinkActive="active-link">Sign-In</button>
+
+        <button mat-raised-button  color="warn" routerLink="register"
+          routerLinkActive="active-link">Sign-Up</button>
+
+
+        <button mat-raised-button  color="warn" routerLink="login"
+        routerLinkActive="active-link">Logout</button>
+
+        <app-cart-status></app-cart-status>
+
+
+
+      </div>
+<!-- Angular mat buttons end-->
+    </div>
+  </div>
+</nav>
+<!-- nav bar ends here -->
